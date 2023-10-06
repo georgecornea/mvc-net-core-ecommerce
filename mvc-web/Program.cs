@@ -6,6 +6,7 @@ builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+// Based on development and/or production variables
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -14,6 +15,8 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// configures wwwroot folder - access all the static files 
 app.UseStaticFiles();
 
 app.UseRouting();
@@ -21,6 +24,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
+    // default route - id? means if we have id
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
