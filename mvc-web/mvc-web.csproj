@@ -3,7 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
+
+	  <!-- for imports - automatically added -->
+    <ImplicitUsings>enable</ImplicitUsings> 
     <RootNamespace>mvc_web</RootNamespace>
   </PropertyGroup>
 
